@@ -5,6 +5,8 @@ OBJECT_FILES=mem.o
 
 all: blink.h mem.hex
 
+blink2: blink2.h mem.hex
+
 clean:
 	rm -f *.o *.hex *.obj blink.bin blink.h
 
@@ -16,4 +18,8 @@ mem.hex: mem.obj
 
 blink.h:
 	z80asm -o blink.bin blink.z80
+	xxd -i blink.bin > blink.h
+
+blink2.h:
+	z80asm -o blink.bin blink2.z80
 	xxd -i blink.bin > blink.h

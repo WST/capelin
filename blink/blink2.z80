@@ -1,6 +1,5 @@
 org 0
-ld A, 0
-out (00h), A
+xor A
 out (00h), A
 ld B, 0
 djnz $
