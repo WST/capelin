@@ -1,0 +1,4 @@
+org 0
+ld A, 0
+out (00h), A
+jp 0
